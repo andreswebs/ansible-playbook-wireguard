@@ -1,0 +1,18 @@
+---
+plugin: azure.azcollection.azure_rm
+
+auth_source: cli
+cloud_environment: AzureCloud
+
+default_host_filters: []
+
+plain_host_names: yes
+
+hostvar_expressions:
+  ansible_host: public_ipv4_address[0]
+
+keyed_groups:
+  - prefix: vm_tag
+    key: tags.Name
+  - prefix: role
+    key: tags.role

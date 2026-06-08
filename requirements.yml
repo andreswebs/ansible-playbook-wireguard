@@ -1,0 +1,10 @@
+---
+roles:
+  - name: andreswebs.docker_app
+
+collections:
+  - name: amazon.aws
+  - name: azure.azcollection
+  - name: google.cloud
+  - name: hetzner.hcloud
+  - name: community.docker

@@ -1,0 +1,19 @@
+---
+plugin: amazon.aws.aws_ec2
+
+regions:
+  - us-east-1
+  - us-east-2
+  - eu-west-1
+
+keyed_groups:
+  - key: tags["Name"]
+    prefix: vm_tag
+
+filters:
+  instance-state-name: running
+
+use_contrib_script_compatible_ec2_tag_keys: true
+
+hostnames:
+  - instance-id

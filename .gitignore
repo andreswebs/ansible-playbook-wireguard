@@ -1,0 +1,9 @@
+.env
+.envrc
+.DS_Store
+ansible-lint.result.sarif
+.cache
+.ansible
+.az-ssh-config
+az_ssh_config/
+inventory/gcp_compute.yml

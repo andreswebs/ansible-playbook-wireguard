@@ -1,0 +1,28 @@
+---
+profile: production
+
+sarif_file: ansible-lint.result.sarif
+
+var_naming_pattern: "^[a-z_][a-z0-9_]*$"
+
+use_default_rules: true
+
+mock_roles:
+  - andreswebs.docker_app
+
+exclude_paths:
+  - inventory/example.gcp.yml
+
+enable_list:
+  - args
+  - empty-string-compare
+  - no-log-password
+  - no-same-owner
+  - name[prefix]
+  - galaxy-version-incorrect
+  - yaml
+
+warn_list:
+  - experimental
+
+offline: true

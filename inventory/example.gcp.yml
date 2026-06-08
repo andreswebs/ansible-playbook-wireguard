@@ -1,0 +1,8 @@
+---
+plugin: google.cloud.gcp_compute
+projects:
+  - your-gcp-project-id
+auth_kind: application
+keyed_groups:
+  - key: tags["items"]
+    prefix: vm_tag
